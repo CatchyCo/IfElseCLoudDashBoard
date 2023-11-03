@@ -1,0 +1,9 @@
+.nav-btn{
+    display: flex;
+    flex-direction: column;
+    .side-nav-btn{
+        height: 3rem;
+        width: 3rem;
+        border: none;
+    }
+}

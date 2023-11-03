@@ -1,0 +1,17 @@
+.main-dashboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  .side-nav{
+    background-color: aquamarine;
+  }
+  .search-bar-user-info{
+    background-color: blue;
+    width: 100%;
+  }
+
+  .dashboard-container{
+    background-color: chartreuse;
+    margin: 1rem;
+  }
+}

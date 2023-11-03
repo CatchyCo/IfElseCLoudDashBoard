@@ -1,0 +1,11 @@
+.main-dashboard {
+    .top-cards-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .table-row{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        padding: 0.5rem;
+    }
+}

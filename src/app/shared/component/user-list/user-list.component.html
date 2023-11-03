@@ -1,0 +1,10 @@
+<div class="user-details">
+    <h1>
+        User Details
+    </h1>
+    <div class="user-list">
+             <div *ngFor="let user of userData">
+                    <app-user-list-details [userDetails]="user" ></app-user-list-details>
+             </div>
+    </div>
+</div>

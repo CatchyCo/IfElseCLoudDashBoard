@@ -1,0 +1,24 @@
+.top-cards-container {
+    margin: 0.5rem;
+    padding: 1.5rem;
+    background-color: cadetblue;
+  .details-icon {
+    display: flex;
+    .right-cards {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+    }
+    .left-cards {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+    }
+  }
+  .card-details {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    margin-top: 1rem;
+  }
+}

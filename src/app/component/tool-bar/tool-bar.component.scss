@@ -1,0 +1,15 @@
+.search-tool {
+    display: flex;
+    background-color: chocolate;
+
+  .search-container {
+    .search-input {
+      border: none;
+    }
+  }
+  .user-details{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+}

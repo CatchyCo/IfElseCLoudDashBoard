@@ -1,0 +1,17 @@
+<div class="user-details">
+ <img [src]="userDetails.picture" alt="">
+ <span class="name">
+     <div>{{userDetails.name }} </div> 
+      <div> {{userDetails.country}}</div> 
+ </span>
+
+ <span>
+    <div class="container"> 
+        <div class="progress" [ngStyle]="{width:userDetails.progress + '%'}" > {{userDetails.progress}} </div> 
+    </div>
+ </span>
+
+ <button [disabled]="userDetails.isActive"  >
+       Active
+ </button>
+</div>

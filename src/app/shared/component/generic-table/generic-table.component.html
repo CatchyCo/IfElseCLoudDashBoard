@@ -1,0 +1,19 @@
+<div class="table-container">
+  <h1>Recent Order</h1>
+  <div class="main-table">
+    <table>
+        <thead>
+      <tr>
+        <ng-container *ngFor="let column of tableColumns">
+          <th>{{ column }}</th>
+        </ng-container>
+      </tr>
+      </thead>
+     <tr *ngFor="let rowData of tableData;let i=index">
+            <td *ngFor="let r of tableColumns">
+                {{rowData[r]}}
+            </td>
+    </tr> 
+    </table>
+  </div>
+</div>
