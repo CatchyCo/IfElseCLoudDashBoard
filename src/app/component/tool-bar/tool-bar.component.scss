@@ -1,15 +1,21 @@
 .search-tool {
     display: flex;
     background-color: chocolate;
+    align-items: center;
 
   .search-container {
     .search-input {
       border: none;
+      height: 1.5rem;
+      width: 15rem;
+      margin-left: 3rem;
     }
   }
   .user-details{
     display: flex;
     justify-content: end;
     width: 100%;
+    height: 3rem;
+    align-items: center;
 }
 }

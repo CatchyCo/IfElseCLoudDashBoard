@@ -6,7 +6,6 @@
     display: flex;
     .right-cards {
       display: flex;
-      justify-content: start;
       width: 100%;
     }
     .left-cards {
@@ -17,7 +16,6 @@
   }
   .card-details {
     display: flex;
-    justify-content: start;
     width: 50%;
     margin-top: 1rem;
   }

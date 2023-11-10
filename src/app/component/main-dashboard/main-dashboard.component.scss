@@ -1,11 +1,27 @@
 .main-dashboard {
-    .top-cards-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    .table-row{
+  .top-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .table-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 0.5rem;
+  }
+  .chart-row {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 5fr);
+    padding-left: 0.5rem;
+    .chart {
+      .chart-1 {
         display: grid;
-        grid-template-columns: 3fr 2fr;
-        padding: 0.5rem;
+        grid-template-columns: 1fr 1fr;
+        .chart-1-r {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
     }
+  }
 }
