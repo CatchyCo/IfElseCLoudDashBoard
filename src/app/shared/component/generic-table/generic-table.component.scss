@@ -4,28 +4,33 @@
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    thead {
-      border: 1px solid black;
-      tr {
-        position: sticky;
-        top: 0;
-        background: white;
+    table {
+      border-spacing: 0px;
+      border-collapse: separate;
+      width: 100%;
+      thead th {
+        padding: 10px;
+        text-align: justify;
+        border-top: 2px solid #999;
+      }
+      thead {
+        border: 1px solid black;
+        tr {
+          position: sticky;
+          top: 0;
+          background: white;
+          padding: 0.5rem;
+        }
+      }
+
+      tr,
+      td {
         padding: 0.5rem;
+        border-top: 2px solid #999;
       }
     }
   }
   .main-table::-webkit-scrollbar {
     display: none;
   }
-}
-
-
-table {
-  border-spacing: 0px;
-  border-collapse: separate;
-  width: 100%;
-}
- table tr td {
-  padding: 0.5rem;
-  border-top: 2px solid #999;
 }
