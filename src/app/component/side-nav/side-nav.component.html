@@ -1,10 +1,13 @@
 <div class="nav-btn">
-   <button  class="side-nav-btn">
-       line
+   <button  class="side-nav-btn menu-btn">
+      <i class="fa-solid fa-grip-lines"></i>
    </button>
    <ng-container *ngFor="let icon of icons">
      <button class="side-nav-btn">
-        {{icon}}
+
+        <i [class]="icon" >
+
+        </i>
      </button>
    </ng-container>
 </div>

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class SideNavComponent {
 
-  public icons =['Home','Go','Dam'];
+  public icons =['fa-solid fa-cube','fa-solid fa-chart-simple','fa-regular fa-square-plus','fa-solid fa-check','fa-solid fa-gear'];
 }

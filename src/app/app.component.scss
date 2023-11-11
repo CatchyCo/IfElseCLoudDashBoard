@@ -2,16 +2,13 @@
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  .side-nav{
-    background-color: aquamarine;
+  .side-nav {
   }
-  .search-bar-user-info{
-    background-color: blue;
+  .search-bar-user-info {
     width: 100%;
   }
 
-  .dashboard-container{
-    background-color: chartreuse;
+  .dashboard-container {
     margin: 1rem;
   }
 }

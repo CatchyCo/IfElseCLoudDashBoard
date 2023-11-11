@@ -1,6 +1,9 @@
 .nav-btn{
     display: flex;
     flex-direction: column;
+    .menu-btn{
+        background-color: blue;
+    }
     .side-nav-btn{
         height: 3rem;
         width: 3rem;

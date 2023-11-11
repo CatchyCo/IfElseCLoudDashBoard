@@ -11,8 +11,9 @@ export class MainDashboardComponent implements OnInit {
   constructor(public dashBoardData: DashBoardDataService) {}
 
   public tableData = [];
-  public topCards = [];
+  public topCards:any;
   public userData = [];
+  public cardIcon = ['fa-solid fa-music','fa-solid fa-chart-pie','fa-solid fa-download','fa-solid fa-arrows-rotate'];
   public data:any;
 
   public chart1 = new Chart({
@@ -115,7 +116,15 @@ export class MainDashboardComponent implements OnInit {
         dataObject = Object.assign(data);
         this.tableData = dataObject['recent_orders'];
         this.userData = dataObject['new_users'];
-        this.topCards = dataObject['top_cards'];
+        this.topCards = dataObject['top_cards'].map((item,index) => {
+          //item.icon = this.cardIcon[index]
+          let itemObj = Object.assign(item)
+          let newObj = {...itemObj , icon : this.cardIcon[index]}
+          
+          
+          return newObj;
+        })  ;
+        console.log(this.topCards)
       }
     });
   }

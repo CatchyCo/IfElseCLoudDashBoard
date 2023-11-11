@@ -1,9 +1,12 @@
 <div class="top-cards-container">
     <div class="details-icon" >
-        <div class="right-cards">right</div>
-        <div class="left-cards">left</div>
+        <div class="right-cards"> {{cartData['value'] +  '%' }} </div>
+        <div class="left-cards"> <i [class]="cartData.icon" >   </i> </div>
     </div>
     <div class="card-details">
-        Lorem minus corporis quia maxime!
+        <div class="header"> 
+                {{cartData['header']}}
+             </div>
+        <div class="sub-header">{{cartData['sub_header']}} </div>
     </div>
 </div>
