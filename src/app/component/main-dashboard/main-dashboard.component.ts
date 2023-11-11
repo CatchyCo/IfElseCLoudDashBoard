@@ -33,6 +33,23 @@ export class MainDashboardComponent implements OnInit {
       } as any
     ]
   });
+  public chart3 = new Chart({
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: 'Linechart'
+    },
+    credits: {
+      enabled: false
+    },
+    series: [
+      {
+        name: 'Line 1',
+        data: [1, 2, 34,5,16,72,83,94,10,11,12,113]
+      } as any
+    ]
+  });
 
   public chart2:any ;
 

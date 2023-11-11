@@ -1,17 +1,19 @@
 <div class="user-details">
- <img [src]="userDetails.picture" alt="">
- <span class="name">
-     <div>{{userDetails.name }} </div> 
-      <div> {{userDetails.country}}</div> 
- </span>
+  <img [src]="userDetails.picture" alt="pic" />
+  <span class="name">
+    <div class="user-name">{{ userDetails.name }}</div>
+    <div class="country">{{ userDetails.country }}</div>
+  </span>
 
- <span>
-    <div class="progress-container"> 
-        <div class="progress" [ngStyle]="{width:userDetails.progress + '%'}" > </div> 
+  <span>
+    <div class="progress-container">
+      <div
+        class="progress"
+        [ngStyle]="{ width: userDetails.progress+ '%' }"
+      ></div>
+      {{ userDetails.progress }} %
     </div>
- </span>
+  </span>
 
- <button [disabled]="userDetails.isActive"  >
-       Active
- </button>
+  <button [disabled]="userDetails.isActive" class="active-btn">Active</button>
 </div>

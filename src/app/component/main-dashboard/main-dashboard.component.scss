@@ -2,6 +2,7 @@
   .top-cards-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
   }
   .table-row {
     display: grid;
@@ -9,14 +10,22 @@
     padding: 0.5rem;
     height: 24rem;
     overflow: hidden;
+    gap:1rem;
+    .table-data{
+      background-color: white;
+    }
+    .user-list{
+      background-color: white;
+    }
   }
   .chart-row {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, 5fr);
     padding-left: 0.5rem;
-    padding: 2rem;
+    margin-top: 2rem;
     .chart {
+      background-color: white;
       .chart-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;

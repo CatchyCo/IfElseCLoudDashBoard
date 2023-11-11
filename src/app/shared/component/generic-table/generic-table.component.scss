@@ -1,12 +1,14 @@
 .table-container {
   h2{
     margin: 0.5rem 0;
+    padding: 0 2rem;
   }
   .main-table {
     max-height: 34rem;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding: 0rem 4rem;
     table {
       border-spacing: 0px;
       border-collapse: separate;
