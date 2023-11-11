@@ -5,14 +5,27 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     thead {
+      border: 1px solid black;
       tr {
         position: sticky;
         top: 0;
-        background: crimson;
+        background: white;
+        padding: 0.5rem;
       }
     }
   }
   .main-table::-webkit-scrollbar {
     display: none;
   }
+}
+
+
+table {
+  border-spacing: 0px;
+  border-collapse: separate;
+  width: 100%;
+}
+ table tr td {
+  padding: 0.5rem;
+  border-top: 2px solid #999;
 }

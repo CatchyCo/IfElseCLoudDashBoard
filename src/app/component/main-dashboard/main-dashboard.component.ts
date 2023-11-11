@@ -10,7 +10,7 @@ import { DashBoardDataService } from 'src/app/services/dash-board-data.service';
 export class MainDashboardComponent implements OnInit {
   constructor(public dashBoardData: DashBoardDataService) {}
 
-  public tableData = [];
+  public tableData:any;
   public topCards:any;
   public userData = [];
   public cardIcon = ['fa-solid fa-music','fa-solid fa-chart-pie','fa-solid fa-download','fa-solid fa-arrows-rotate'];
@@ -114,7 +114,11 @@ export class MainDashboardComponent implements OnInit {
           top_cards: [],
         };
         dataObject = Object.assign(data);
-        this.tableData = dataObject['recent_orders'];
+        this.tableData = dataObject['recent_orders'].map((item,index)  => {
+          let itemObj = Object.assign(item);
+          let newObj = {...itemObj , id : String(index + 1).padStart(2, '0')};
+          return newObj;
+        });
         this.userData = dataObject['new_users'];
         this.topCards = dataObject['top_cards'].map((item,index) => {
           //item.icon = this.cardIcon[index]
