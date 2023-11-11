@@ -1,4 +1,15 @@
 .user-details {
+  h2{
+    margin: 1.5rem 0;
+  }
+  padding: 0 4rem;
   .user-list {
+    max-height: 34rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .user-list::-webkit-scrollbar {
+    display: none;
   }
 }
