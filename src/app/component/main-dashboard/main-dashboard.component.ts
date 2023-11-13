@@ -15,6 +15,7 @@ export class MainDashboardComponent implements OnInit {
   public userData = [];
   public cardIcon = ['fa-solid fa-music','fa-solid fa-chart-pie','fa-solid fa-download','fa-solid fa-arrows-rotate'];
   public data:any;
+  public donutChart:any;
 
   public chart1 = new Chart({
     chart: {
@@ -106,6 +107,62 @@ export class MainDashboardComponent implements OnInit {
   
   }
 
+  initDonut() {
+    const donut = new Chart({
+      chart: {
+        plotBackgroundColor: '' ,
+        plotBorderWidth: 0,
+        plotShadow: false
+      },
+      title: {
+        text: '<strong>1137<br>streams</strong>',
+        align: 'center',
+        verticalAlign: 'middle',
+        y: 0
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      credits: {
+        enabled: false
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            distance: -50,
+            style: {
+              fontWeight: 'bold',
+              color: 'white'
+            }
+          },
+          startAngle: -90,
+          endAngle: -180,
+          center: ['50%', '50%'],
+          size: '90%',
+          showInLegend: true
+        }
+      },
+      series: [
+        {
+          name: 'Browsers',
+          data: [
+            {
+              name: 'Chrome',
+              y: 61.41
+            },
+            {
+              name: 'Internet Explorer',
+              y: 11.84,
+            }],
+          type: 'pie',
+          innerSize: '50%',
+        }]
+    });
+    this.donutChart = donut;
+  }
 
   private getRandomNumber(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -115,6 +172,7 @@ export class MainDashboardComponent implements OnInit {
   ngOnInit() {
     this.fetchDashBoardData();
     this.createChartColumn();
+    this.initDonut();
   }
 
   /**

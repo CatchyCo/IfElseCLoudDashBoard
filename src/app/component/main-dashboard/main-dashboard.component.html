@@ -1,61 +1,39 @@
-
-
 <div class="main-dashboard">
-        <div class="top-cards-container"   >
-            <ng-container *ngFor="let cartData of topCards" >
-                <app-top-cards [cartData]="cartData" ></app-top-cards>
-            </ng-container>
+  <div class="top-cards-container">
+    <ng-container *ngFor="let cartData of topCards">
+      <app-top-cards [cartData]="cartData"></app-top-cards>
+    </ng-container>
+  </div>
+  <div class="table-row">
+    <div class="table-data">
+      <app-generic-table [tableData]="tableData"> </app-generic-table>
+    </div>
+    <div class="user-list">
+      <app-user-list [userData]="userData"></app-user-list>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart chart-11">
+      <div class="chart-1">
+        <div class="chart-1-l">
+          <span> Sales Statistics </span>
         </div>
-        <div class="table-row">
-            <div class="table-data">
-                <app-generic-table [tableData]="tableData" >
-
-                </app-generic-table>
-            </div>
-            <div class="user-list">
-                <app-user-list [userData]="userData" ></app-user-list>
-            </div>
+        <div class="chart-1-r">All Days</div>
+      </div>
+      <div class="inner-charts" [chart]="chart1"></div>
+    </div>
+    <div class="chart chart-2">
+      <div class="chart-1">
+        <div class="chart-1-l">
+          <span> Sales Statistics </span>
         </div>
-        <div class="chart-row">
-            <div class="chart ">
-                 <div class="chart-1">
-                    <div class="chart-1-l" >
-                        <span>
-                            Sales Statistics
-                        </span>
-                     </div>
-                     <div class="chart-1-r" >All Days</div>
-                 </div>
-                 <div [chart]="chart1">
-                    
-                 </div>
-            </div>
-            <div class="chart ">
-                <div class="chart-1">
-                   <div class="chart-1-l" >
-                       <span>
-                           Sales Statistics
-                       </span>
-                    </div>
-                    <div class="chart-1-r" >All Days</div>
-                </div>
-                <div [chart]="chart2">
-                   
-                </div>
-           </div>
-           <div class="chart ">
-            <div class="chart-1">
-               <div class="chart-1-l" >
-                   <span>
-                       Sales Statistics
-                   </span>
-                </div>
-                <div class="chart-1-r" >All Days</div>
-            </div>
-            <div [chart]="chart3">
-               
-            </div>
-       </div>
-          
-        </div>
+        <div class="chart-1-r">All Days</div>
+      </div>
+      <div class="inner-charts" [chart]="chart2"></div>
+    </div>
+    <div class="chart chart-3">
+      <div class="inner-charts" [chart]="donutChart"></div>
+    </div>
+  </div>
 </div>
+<!-- style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto" -->
